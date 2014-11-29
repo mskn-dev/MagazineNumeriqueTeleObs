@@ -32,11 +32,40 @@
 </head>
 <body data-spy="scroll" data-target="#main-menu">
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <div class="geass-loader-overlay left"></div><!-- End .geass-loader-overlay left -->
+        <div class="geass-loader-overlay right"></div><!-- End .geass-loader-overlay right -->
+        <div id="wrapper">
+            <header id="header" class="transparent">
+                    <nav class="navbar navbar-default navbar-transparent" role="navigation">
+                        <div class="container">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand navbar-brand-img" href="index.aspx"><img src="Ressources/img/logo-teleobs.svg" /></a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse navbar-right" id="main-menu">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="#home">Acceuil</a></li>
+                                    <li><a href="Cinema.aspx">Cinéma</a></li>
+                                    <li><a href="Television.aspx">Télévision</a></li>
+                                    <li><a href="Actus.aspx">Actus</a></li>
+                                    <li><a href="#portfolio">Programme Tv</a></li>
+                                    <li><a href="#contactus">Contact</a></li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                    </nav>
+                </header>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
     <script type="text/javascript" src="Ressources/geass/geass/js/bootstrap-switch.min.js"></script>
