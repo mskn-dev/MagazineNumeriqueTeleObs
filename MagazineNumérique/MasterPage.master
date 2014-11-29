@@ -1,0 +1,51 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="description" content="Magazine télévision, cinéma"/>
+<meta name="author" content="AMASKANE Mehdi, SLAOUI Zineb">
+    <title>TéléObs Magazine en ligne</title>
+
+    <link type="text/css" href="Ressources/geass/documentation/css/style.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/geass/geass/css/animate.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/geass/geass/css/bootstrap-switch.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/geass/geass/css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/geass/geass/css/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/geass/geass/css/fonts.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/geass/geass/css/jquery.selectbox.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/geass/geass/css/prettyPhoto.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/geass/geass/css/responsive.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/geass/geass/css/revslider.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/geass/geass/css/style.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/geass/geass/css/YTPlayer.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+        
+    <script type="text/javascript" src="Ressources/geass/geass/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="Ressources/geass/geass/js/queryloader2.min.js"></script>
+    <script type="text/javascript" src="Ressources/geass/geass/js/modernizr.js"></script>
+   
+</head>
+<body data-spy="scroll" data-target="#main-menu">
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+    <script type="text/javascript" src="Ressources/geass/geass/js/bootstrap-switch.min.js"></script>
+    <script type="text/javascript" src="Ressources/geass/geass/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="Ressources/geass/geass/js/plugins.js"></script>
+    <script type="text/javascript" src="Ressources/geass/geass/js/jquery.mb.YTPlayer.js"></script>
+    <script type="text/javascript" src="Ressources/geass/geass/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="Ressources/geass/geass/js/jquery.selectbox.min.js"></script>
+    <script type="text/javascript" src="Ressources/geass/geass/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="Ressources/geass/geass/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="Ressources/geass/geass/js/main.js"></script>
+</html>
