@@ -3,69 +3,37 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        <div class="geass-loader-overlay left"></div><!-- End .geass-loader-overlay left -->
-        <div class="geass-loader-overlay right"></div><!-- End .geass-loader-overlay right -->
+      
+    <!-- Home Section -->
+    <section id="home" class="section parallax" data-stellar-background-ratio="0.4">
+        <div id="revslider-container">
+            <div id="revslider">
+                <ul>
+                    <li data-transition="random" data-slotamount="8" data-masterspeed="400" data-thumb="Ressources/img/Caroussel/imgCaroussel1.jpg" data-saveperformance="on"  data-title="Bollywood">
+                        <img src="Ressources/img/revslider/dummy.png"  alt="slidebg1" data-lazyload="Ressources/img/Caroussel/imgCaroussel1.jpg" data-kenburns="on" data-bgposition="center center" data-duration="4800" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center top" data-bgrepeat="no-repeat">
+                        <div class="tp-caption rev-title rev-border sft stt" data-x="center" data-hoffset="25" data-y="215" data-start="1000" data-speed="2000"><span class="blue-colorr">Bollywood</span></div>
 
-         <div id="wrapper">
-
-            <!-- Header / Menu Section -->
-            <header id="header" class="transparent">
-                <nav class="navbar navbar-default navbar-transparent" role="navigation">
-                    <div class="container">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand navbar-brand-img" href="index.html"><img src="Ressources/img/logo-teleobs.svg" /></a>
-                        </div>
-
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse navbar-right" id="main-menu">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="#home">Acceuil</a></li>
-                                <li><a href="#aboutus">Cinéma</a></li>
-                                <li><a href="#services">Télévision</a></li>
-                                <li><a href="#portfolio">Programme Tv</a></li>
-                                <li><a href="#contactus">Contact</a></li>
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </div><!-- /.container-fluid -->
-                </nav>
-            </header>
-            <!-- Home Section -->
-            <section id="home" class="section parallax" data-stellar-background-ratio="0.4">
-                <div id="revslider-container">
-                    <div id="revslider">
-                        <ul>
-                            <li data-transition="random" data-slotamount="8" data-masterspeed="400" data-thumb="Ressources/img/Caroussel/imgCaroussel1.jpg" data-saveperformance="on"  data-title="Bollywood">
-                                <img src="Ressources/img/revslider/dummy.png"  alt="slidebg1" data-lazyload="Ressources/img/Caroussel/imgCaroussel1.jpg" data-kenburns="on" data-bgposition="center center" data-duration="4800" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center top" data-bgrepeat="no-repeat">
-                                <div class="tp-caption rev-title rev-border sft stt" data-x="center" data-hoffset="25" data-y="215" data-start="1000" data-speed="2000"><span class="blue-colorr">Bollywood</span></div>
-
-                                <div class="tp-caption rev-title rev-title-medium customin customout" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-start="600" data-splitin="chars" data-splitout="chars" data-elementdelay="0.3" data-endelementdelay="0.1" data-endspeed="600" data-x="center" data-y="300" data-speed="1200">condamnée à 26 ans de prison pour blasphème</div>
-                            </li>
-                            <li data-transition="random" data-slotamount="8" data-masterspeed="450" data-thumb="Ressources/img/Caroussel/imgCaroussel2.jpg" data-saveperformance="on"  data-title="Emmanuelle Devos">
-                                <img src="Ressources/img/revslider/dummy.png"  alt="slidebg2" data-lazyload="Ressources/img/Caroussel/imgCaroussel2.jpg"  data-kenburns="on" data-bgposition="center bottom" data-duration="4200" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center center" data-bgrepeat="no-repeat">
+                        <div class="tp-caption rev-title rev-title-medium customin customout" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-start="600" data-splitin="chars" data-splitout="chars" data-elementdelay="0.3" data-endelementdelay="0.1" data-endspeed="600" data-x="center" data-y="300" data-speed="1200">condamnée à 26 ans de prison pour blasphème</div>
+                    </li>
+                    <li data-transition="random" data-slotamount="8" data-masterspeed="450" data-thumb="Ressources/img/Caroussel/imgCaroussel2.jpg" data-saveperformance="on"  data-title="Emmanuelle Devos">
+                        <img src="Ressources/img/revslider/dummy.png"  alt="slidebg2" data-lazyload="Ressources/img/Caroussel/imgCaroussel2.jpg"  data-kenburns="on" data-bgposition="center bottom" data-duration="4200" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center center" data-bgrepeat="no-repeat">
                                 
-                                <div class="tp-caption rev-title rev-border sft stt" data-x="center" data-y="210" data-start="1000" data-speed="2000">Emmanuelle Devos</div>
+                        <div class="tp-caption rev-title rev-border sft stt" data-x="center" data-y="210" data-start="1000" data-speed="2000">Emmanuelle Devos</div>
 
-                                <div class="tp-caption rev-title rev-title-medium customin customout" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-start="600" data-splitin="chars" data-splitout="chars" data-elementdelay="0.3" data-endelementdelay="0.1" data-endspeed="600" data-x="center" data-y="300" data-speed="1200">Simone Veil par Emmanuelle Devos</div>
-                            </li>
-                            <li data-transition="random" data-slotamount="8" data-masterspeed="450" data-thumb="Ressources/img/Caroussel/imgCaroussel3.jpg" data-saveperformance="on"  data-title="Cantona">
-                                <img src="Ressources/img/revslider/dummy.png"  alt="slidebg2" data-lazyload="Ressources/img/Caroussel/imgCaroussel3.jpg"  data-kenburns="on" data-bgposition="center bottom" data-duration="4200" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center center" data-bgrepeat="no-repeat">
+                        <div class="tp-caption rev-title rev-title-medium customin customout" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-start="600" data-splitin="chars" data-splitout="chars" data-elementdelay="0.3" data-endelementdelay="0.1" data-endspeed="600" data-x="center" data-y="300" data-speed="1200">Simone Veil par Emmanuelle Devos</div>
+                    </li>
+                    <li data-transition="random" data-slotamount="8" data-masterspeed="450" data-thumb="Ressources/img/Caroussel/imgCaroussel3.jpg" data-saveperformance="on"  data-title="Cantona">
+                        <img src="Ressources/img/revslider/dummy.png"  alt="slidebg2" data-lazyload="Ressources/img/Caroussel/imgCaroussel3.jpg"  data-kenburns="on" data-bgposition="center bottom" data-duration="4200" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center center" data-bgrepeat="no-repeat">
                                 
-                                <div class="tp-caption rev-title rev-border sft stt" data-x="center" data-y="210" data-start="1000" data-speed="2000">Cantona</div>
+                        <div class="tp-caption rev-title rev-border sft stt" data-x="center" data-y="210" data-start="1000" data-speed="2000">Cantona</div>
 
-                                <div class="tp-caption rev-title rev-title-medium customin customout" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-start="600" data-splitin="chars" data-splitout="chars" data-elementdelay="0.3" data-endelementdelay="0.1" data-endspeed="600" data-x="center" data-y="300" data-speed="1200">"Il faut rappeler la vérité sur l'immigration"</div>
-                            </li>
-                        </ul>
-                    </div><!-- End revslider -->
-                </div><!-- End revslider-container -->
-            </section><!-- End #home -->
-        </div>  
+                        <div class="tp-caption rev-title rev-title-medium customin customout" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-start="600" data-splitin="chars" data-splitout="chars" data-elementdelay="0.3" data-endelementdelay="0.1" data-endspeed="600" data-x="center" data-y="300" data-speed="1200">"Il faut rappeler la vérité sur l'immigration"</div>
+                    </li>
+                </ul>
+            </div><!-- End revslider -->
+        </div><!-- End revslider-container -->
+    </section><!-- End #home -->
+ 
     <script>
         $(function () {
             // Slider Revolution for Home Section
