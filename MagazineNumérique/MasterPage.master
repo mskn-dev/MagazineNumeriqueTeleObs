@@ -9,6 +9,7 @@
 <meta name="author" content="AMASKANE Mehdi, SLAOUI Zineb">
     <title>TéléObs Magazine en ligne</title>
 
+    <link type="text/css" href="Ressources/css/TeleObsMain.css" rel="stylesheet" />
     <link type="text/css" href="Ressources/geass/documentation/css/style.css" rel="stylesheet" />
     <link type="text/css" href="Ressources/geass/geass/css/animate.css" rel="stylesheet" />
     <link type="text/css" href="Ressources/geass/geass/css/bootstrap-switch.css" rel="stylesheet" />
@@ -58,6 +59,8 @@
                                     <li><a href="Actus.aspx">Actus</a></li>
                                     <li><a href="#portfolio">Programme Tv</a></li>
                                     <li><a href="#contactus">Contact</a></li>
+                                    <li><a class="connectLink" href="#contactus">Se connecter</a></li>
+                                    <li><a class="connectLink" href="#contactus">S'abonner</a></li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
