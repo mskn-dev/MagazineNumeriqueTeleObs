@@ -1,3 +1,27 @@
 ﻿.font-20{font-size:20px;}
 .connectLink{color:red !important;}
 .connectLink:hover{  color: #fff!important ;  background-color: transparent!important;}
+.center_block_TeleObs{margin-left: 15%;margin-right: 15%;}
+
+/*display*/
+.displayNone{display:none;}
+
+/*Couleurs*/
+.TitleTeleObs{color:rgb(0, 157, 223);}
+.no-background{background-color:white!important;}
+
+/*bordures*/
+.no-border{border:none!important;}
+
+/*Marges*/
+.m-top-xs{margin-top:5px;}
+.m-top-md{margin-top:10px;}
+.m-top-lg{margin-top:20px;}
+
+.m-bottom-xs{margin-bottom:5px;}
+.m-bottom-md{margin-bottom:10px;}
+.m-bottom-lg{margin-bottom:20px;}
+
+
+
+#main-nav{background: rgba(0, 0, 0, 0.1);}

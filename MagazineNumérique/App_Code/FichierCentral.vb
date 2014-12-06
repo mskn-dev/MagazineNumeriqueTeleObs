@@ -12,4 +12,5 @@ Public Class FichierCentral
     Public Property Abonnement As String
     Public Property PkCategorieAbonnement As Integer
     Public Property PkAbonnemnt As Integer
+
 End Class
