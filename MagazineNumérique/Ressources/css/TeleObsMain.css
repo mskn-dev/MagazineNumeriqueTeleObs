@@ -1,14 +1,23 @@
 ﻿.font-20{font-size:20px;}
-.connectLink{color:red !important;}
-.connectLink:hover{  color: #fff!important ;  background-color: transparent!important;}
-.center_block_TeleObs{margin-left: 15%;margin-right: 15%;}
+.connect-link{color:red !important;}
+.connect-link:hover{  color: #fff!important ;  background-color: transparent!important;}
+.alert-navbar{display:inline;color: #EDEDEE;background-color: rgba(0, 157, 223, 1);border-color: #595B4E;border-radius: 40px!important;}
+
 
 /*display*/
 .displayNone{display:none;}
+.displayNonei{visibility:hidden!important;}
+.center-block-abonnement{margin-left: 15%;margin-right: 15%;margin-top:1%;}
+.center-block-redacteur{margin-left: 15%;margin-right: 15%;margin-top:1%;}
+.center-block-connexion{margin-left: 28.5%;margin-right: 28.5%;}
+.center-block-article{margin-left: 8%;margin-right: 8%;margin-top: 1%;padding: 10px;}
+.center-block-article-single{margin-left: 15%;margin-right: 15%;margin-top: 15%!important;}
 
 /*Couleurs*/
-.TitleTeleObs{color:rgb(0, 157, 223);}
+.title-tele-obs{color:rgb(0, 157, 223);}
 .no-background{background-color:white!important;}
+.menu-redacteur-admin{background: rgba(0, 157, 223, 0.5)!important;position:relative!important;right:-21%!important;}
+.menu-redacteur-admin li>a {color:white!important;}
 
 /*bordures*/
 .no-border{border:none!important;}
@@ -22,6 +31,17 @@
 .m-bottom-md{margin-bottom:10px;}
 .m-bottom-lg{margin-bottom:20px;}
 
+.m-left-xs{margin-left:5px;}
+.m-left-md{margin-left:10px;}
+.m-left-lg{margin-left:20px;}
+
+.no-bottom-margin{margin-bottom:0px;}
+
+.no-margin{margin:0px!important;} 
+.no-padding{padding:0px!important;}
 
 
 #main-nav{background: rgba(0, 0, 0, 0.1);}
+
+/*Redacteur*/
+#contenuInput{height:300px;overflow:auto;}

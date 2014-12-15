@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="description" content="Magazine télévision, cinéma"/>
-<meta name="author" content="AMASKANE Mehdi, SLAOUI Zineb">
+<meta name="author" content="AMASKANE Mehdi, SLAOUI Zineb"/>
     <title>TéléObs Magazine en ligne</title>
 
     <link type="text/css" href="Ressources/css/TeleObsMain.css" rel="stylesheet" />
@@ -29,7 +29,7 @@
     <script type="text/javascript" src="Ressources/geass/geass/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/queryloader2.min.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/modernizr.js"></script>
-   
+     
 </head>
 <body data-spy="scroll" data-target="#main-menu">
     <form id="form1" runat="server">
@@ -37,9 +37,21 @@
         <div class="geass-loader-overlay right"></div><!-- End .geass-loader-overlay right -->
         <div id="wrapper">
             <header id="header" class="transparent">
+                 <%If Connected then %>
+                    <script type="text/javascript">
+                        Utilisateur_ConnecteId = '<%= UserId%>';
+                        Utilisateur_ConnectePk = '<%= UserPk %>';
+                        Utilisateur_ConnecteProfil = '<%= UserProfil%>';
+                        Utilisateur_ConnecteEstAbonne = '<%= UserAbonne%>';
+                        Utilisateur_ConnectePkAbonnement = '<%=UserPkAbonnement%>'
+                        Utilisateur_ConnecteNom = '<%= UserName%>';
+                        Utilisateur_ConnecteMail = '<%= UserEmail%>';
+                        Utilisateur_ConnecteLogin = '<%= UserLogin%>';
+                    </script>
+                <%End If%>
                     <nav id="main-nav" class="navbar navbar-default navbar-transparent" role="navigation">
                         <div class="container">
-                            <div class="navbar-header">
+                            <div class="navbar-header col-md-2">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
                                     <span class="sr-only">Toggle navigation</span>
                                     <span class="icon-bar"></span>
@@ -48,18 +60,37 @@
                                 </button>
                                 <a class="navbar-brand navbar-brand-img" href="index.aspx"><img src="Ressources/img/logo-teleobs.svg" /></a>
                             </div>
-                            <div class="collapse navbar-collapse navbar-right" id="main-menu">
+                            <div class="col-md-8 collapse navbar-collapse navbar-right" id="main-menu">
                                 <ul class="nav navbar-nav">
-                                    <li class="active"><a href="#home">Acceuil</a></li>
+                                    <li class="active"><a href="index.aspx">Acceuil</a></li>
                                     <li><a href="Cinema.aspx">Cinéma</a></li>
                                     <li><a href="Television.aspx">Télévision</a></li>
                                     <li><a href="Actus.aspx">Actus</a></li>
                                     <li><a href="#portfolio">Programme Tv</a></li>
                                     <li><a href="#contactus">Contact</a></li>
-                                    <%If Page.Title <> "Abonnement" Then%>
-                                    <li><a class="connectLink" href="#contactus">Se connecter</a></li>
-                                    <li><a class="connectLink" href="Abonnement.aspx">S'abonner</a></li>
+                                    <%If Page.Title <> "Connexion" AndAlso Connected = False Then%>
+                                    <li><a class="connect-link" href="Connexion.aspx">Se connecter</a></li>
+                                    <%ElseIf Connected = True Then%>
+                                    <li><a class="connect-link" href="Deconnexion.aspx">Se deconnecter</a></li>
                                     <%End If%>
+                                    <%If Page.Title <> "Abonnement" AndAlso Connected = False Then%>
+                                    <li><a class="connect-link" href="Abonnement.aspx">S'abonner</a></li>
+                                     <%ElseIf Connected = True Then%>
+                                    <% If EstRedacteur OrElse EstAdmin Then%>
+                                    <li><a class="dropdown-toggle connect-link" href="Profil.aspx" data-toggle="dropdown" aria-expanded="true"><div runat="server" id="NomProfil" class="alert alert-navbar sm-separator">Bonjour Mr <%=UserName%> <%If EstRedacteur OrElse EstAdmin Then%><i class="fa fa-angle-down"></i><%End If%></div></a>
+                                        <ul class="menu-redacteur-admin dropdown-menu">
+                                            <li><a href="../Profil.aspx">Profil</a></li>
+                                            <li><a href="../Redacteur.aspx">Articles</a></li>
+                                            <%If EstAdmin Then%>
+                                            <li><a href="../Admin.aspx">Redacteurs</a></li>
+                                            <%End If%>
+                                        </ul>
+                                        <%Else%>
+                                        <li><a href="Profil.aspx"><div runat="server" id="NomProfilLecteur" class="alert alert-navbar sm-separator">Bonjour Mr <%=UserName%></div></a>
+                                        <% End If%>
+                                    </li> 
+                                    <%End If%>
+                   
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
@@ -73,9 +104,9 @@
         </div>
     </form>
 </body>
-    <script type="text/javascript" src="Ressources/geass/geass/js/bootstrap-switch.min.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/bootstrap.min.js"></script>
-     <script type="text/javascript" src="Ressources/geass/geass/js/plugins.js"></script>
+    <script type="text/javascript" src="Ressources/geass/geass/js/bootstrap-switch.min.js"></script>
+    <%--<script type="text/javascript" src="Ressources/geass/geass/js/plugins.js"></script>--%>
     <script type="text/javascript" src="Ressources/geass/geass/js/jquery.mb.YTPlayer.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/jquery.selectbox.min.js"></script>
@@ -84,5 +115,5 @@
     <script type="text/javascript" src="Ressources/js/ajaxCall.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/main.js"></script>
     <script type="text/javascript" src="Ressources/js/utils.js"></script>
-    <script type="text/javascript" src="Ressources/js/abonnement.js"></script>
+    
 </html>

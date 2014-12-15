@@ -6,7 +6,13 @@
     this.informationDebug = {};
 }
 
+AjaxCall.prototype.URL_FICHIER_CENTRAL = "WebServices/FichierCentral.asmx";
 AjaxCall.prototype.URL_ABONNEMENT = "WebServices/Abonnements.asmx";
+AjaxCall.prototype.URL_LECTEUR = "WebServices/Lecteur.asmx";
+AjaxCall.prototype.URL_REDACTEUR = "WebServices/Redacteur.asmx";
+AjaxCall.prototype.URL_ARTICLES = "WebServices/Articles.asmx";
+
+
 
 AjaxCall.prototype.AddParameter = function (parameterName, parameterValue) {
     this.params[parameterName] = parameterValue;
