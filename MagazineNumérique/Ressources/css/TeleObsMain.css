@@ -11,7 +11,9 @@
 .center-block-redacteur{margin-left: 15%;margin-right: 15%;margin-top:1%;}
 .center-block-connexion{margin-left: 28.5%;margin-right: 28.5%;}
 .center-block-article{margin-left: 8%;margin-right: 8%;margin-top: 1%;padding: 10px;}
-.center-block-article-single{margin-left: 15%;margin-right: 15%;margin-top: 15%!important;}
+.center-block-article-single{margin-left: 15%;margin-right: 15%;margin-top: 15%!important;padding-right: 5%;padding-left: 5%;}
+.center-block-programme-tv{margin-left:8%;margin-right:8%;}
+.iframe-programme-tv{width:100%;height:755px;border:none;margin-bottom:0;display:block;margin-left:3%;margin-right:3%;}
 
 /*Couleurs*/
 .title-tele-obs{color:rgb(0, 157, 223);}

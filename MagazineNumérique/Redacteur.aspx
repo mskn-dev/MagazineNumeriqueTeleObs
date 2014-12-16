@@ -17,14 +17,32 @@
                     <div class="panel panel-body">
                         <div class="col-md-12 col-xs-12 text-center">
                             <label class="col-md-12">
-                                <input runat="server" type="checkbox" name="abonnement" id="inputUne"/>
+                                <input runat="server" type="checkbox" name="Une" id="inputUne"/>
                                 <span id="abonnement">C'est article à la Une ?</span>
                             </label>
+                             <div class="displayNone" id="divUne">
+                               <%-- <div class='radio'>
+                                    <label><input runat="server" type='radio' name='choixUne' id="Une1" value="1"/>
+                                        <span>Une 1</span>
+                                    </label>
+                                </div>
+                                  <div class='radio'>
+                                    <label><input runat="server" type='radio' name='choixUne' id="Une2" value="1"/>
+                                        <span>Une 2</span>
+                                    </label>
+                                </div>
+                                  <div class='radio'>
+                                    <label><input runat="server" type='radio' name='choixUne' id="Une3" value="1"/>
+                                        <span>Une 3</span>
+                                    </label>
+                                </div>--%>
+                                 <span class="alert alert-info">C'est la troisième Une du caroussel qui sera remplacèe !</span>
+                            </div>
                         </div>
                          <div id="selectCategoriesMedia" class="col-md-12 col-xs-12 input-group">
                             <span class="input-group-addon">Catégorie*</span>
-                            <select runat="server" datatextfield="CategorieMedia" datavaluefield="PkCategorieMedia" id="listeCategoriesMedia" class="col-md-12 form-control" onblur="verifierInputRempli(this);">
-                            </select>
+                            <asp:DropDownList runat="server" datatextfield="CategorieMedia" datavaluefield="PkCategorieMedia" id="listeCategoriesMedia" class="col-md-12 form-control" onblur="verifierInputRempli(this);">
+                            </asp:DropDownList>
                             <span id="erreurSelect" runat="server" class="displayNone text-center text-danger error-input"> Vous ne pouvez pas créer d'articles sans catégorie</span>
                         </div>
                         <div class="col-md-12 col-xs-12 input-group">
@@ -49,9 +67,9 @@
                             <asp:Button ID="imageValider" runat="server" Text="Valider" CssClass="displayNonei m-left-md btn-upload btn btn-md btn-success"></asp:Button>
                         </div>
                         <div id="videoInputDiv" class="col-md-12 col-xs-12 input-group">
-                            <span class="input-group-addon">Vidéo</span>
+                            <span class="input-group-addon">Url Vidéo</span>
                             <div class="col-md-8 no-padding">
-                                <asp:FileUpload runat="server" id="videoInput"  type="file" accept="video/*" class="form-control"/>
+                                <input runat="server" id="videoInput"  type="text" class="form-control"/>
                             </div>
                             <asp:Button ID="videoValider" runat="server" Text="Valider" CssClass="displayNonei m-left-md btn-upload btn btn-md btn-success"></asp:Button>
                         </div>

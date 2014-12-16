@@ -32,6 +32,8 @@ website:   	http://www.themepunch.com
 .tp-caption { 
 	z-index:1; 
 	white-space:nowrap;
+     background: rgba(192, 193, 198, 0.56);
+     padding:5px;
 }
 
 .tp-caption-demo .tp-caption	{
@@ -63,7 +65,7 @@ website:   	http://www.themepunch.com
 .tp-caption.rev-title {
 	position:absolute;
 	font: 40px/1 "latobold", Arial, sans-serif;
-	color:#fff;
+	color:#eee;
 	z-index: 50;
 	border-style:none;
 	white-space:nowrap;
@@ -78,10 +80,10 @@ website:   	http://www.themepunch.com
 	padding:0 0.15em;
 }
 
-.tp-caption.rev-border {
+/*.tp-caption.rev-border {
 	border:3px solid #fff;
 	padding:0.4em 0.45em;
-}
+}*/
 
 .tp-caption.rev-title.rev-title-big {
 	font-size:100px;

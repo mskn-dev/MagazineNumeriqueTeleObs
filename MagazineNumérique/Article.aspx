@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="Article.aspx.vb" Inherits="Article" %>
+﻿<%@ Page Title="Article" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="Article.aspx.vb" Inherits="Article" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div id="articleDiv" class="center-block-article-single displayNone row single-portfolio">
-        <div id="mediaArticle" style="margin-top: 10%;" class="col-md-6">
+        <div id="mediaArticle" style="margin-top:5%;" class="col-md-6">
         </div><!-- End .col-md-7 --> 
 
         <div id="textArticleDiv" class="col-md-6">

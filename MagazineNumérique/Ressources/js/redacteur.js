@@ -1,22 +1,50 @@
 ﻿var infosArticle = new Object();
 $(function () {
-    $("#ContentPlaceHolder1_listeCategoriesMedia").prepend("<option value=''>Choisissez une catégorie</option>");
+    //$("#ContentPlaceHolder1_listeCategoriesMedia").prepend("<option value=''>Choisissez une catégorie</option>");
 
-    $("#ContentPlaceHolder1_listeCategoriesMedia").change(function () {
-        $(this).find('option').each(function () {
-            if($(this).is(':selected'))
-                $(this).prop('selected', 'selected');
-            else
-                $(this).prop('selected', 'selected');
-        });
-    })
-
+    //$("#ContentPlaceHolder1_listeCategoriesMedia").change(function () {
+    //    $(this).find('option').each(function () {
+    //        if($(this).is(':selected'))
+    //            $(this).prop('selected', 'selected');
+    //        else
+    //            $(this).prop('selected', 'selected');
+    //    });
+    //})
+    
+    $("#ContentPlaceHolder1_inputUne").change(function () {
+        if ($(this).is(":checked"))
+            $("#divUne").fadeIn('slow');
+        else
+            $("#divUne").fadeOut('slow');
+    });
+    
     $("#ContentPlaceHolder1_titreInput").focusout(function () { showValider(); });
     $("#ContentPlaceHolder1_listeCategoriesMedia").focusout(function () { showValider(); });
     $("#ContentPlaceHolder1_contenuInput").focusout(function () { showValider(); });
    
+    getArticleCaroussel3();
     getAllArticles();
 });
+
+function getArticleCaroussel3() {
+
+    var KO = function (result) {
+
+    }
+
+    var OK = function (result) {
+        setIdCaroussel3(result[2].Pk);
+    }
+
+    var oAjax = new AjaxCall();
+    oAjax.WebService = oAjax.URL_ARTICLES;
+    oAjax.WebMethod = "GetArticlesUne";
+    oAjax.Call(OK, KO);
+}
+
+function setIdCaroussel3(id) {
+    $("#ContentPlaceHolder1_inputUne").val(id);
+}
 
 function showValider() {
     if (verifierInputRempli(undefined, undefined, "ContentPlaceHolder1_listeCategoriesMedia") && verifierInputRempli(undefined, undefined, "ContentPlaceHolder1_titreInput") && verifierInputRempli(undefined, undefined, "ContentPlaceHolder1_contenuInput")) {

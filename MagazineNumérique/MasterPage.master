@@ -66,8 +66,10 @@
                                     <li><a href="Cinema.aspx">Cinéma</a></li>
                                     <li><a href="Television.aspx">Télévision</a></li>
                                     <li><a href="Actus.aspx">Actus</a></li>
-                                    <li><a href="#portfolio">Programme Tv</a></li>
+                                    <li><a href="ProgrammeTv.aspx">Programme Tv</a></li>
+                                    <%If Page.Title <> "Article" Then%>
                                     <li><a href="#contactus">Contact</a></li>
+                                    <%End If%>
                                     <%If Page.Title <> "Connexion" AndAlso Connected = False Then%>
                                     <li><a class="connect-link" href="Connexion.aspx">Se connecter</a></li>
                                     <%ElseIf Connected = True Then%>
@@ -101,6 +103,47 @@
             <%End If%>
             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+            <%If Page.Title <> "Article" Then%>
+                <section id="contactus" class="section">
+                    <header class="no-margin container text-center">
+                        <h1 class="section-title" style="font-size: 75px;">Contact</h1>
+                        <p class="section-desc">
+                            Laissez nous vos suggestions, et vos remarques
+                        </p>
+                    </header>
+                    <div class="lg-margin2x"></div><!-- space -->
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="contact-info-box text-center">
+                                    <h3>Adresse</h3>
+                                    <span class="contact-info-icon yellowbg"><i class="fa fa-map-marker"></i></span>
+                                    <ul class="contact-info-list">
+                                        <li>Université Paris 8, Département Hypermédia</li>
+                                        <li> 2 Rue de la Liberté, 93526 Saint-Denis, France</li>
+                                    </ul>
+                                </div><!-- End .contact-info-box -->
+                            </div><!-- End .col-md-4 -->
+                        
+                            <div class="md-margin clearfix visible-xs"></div><!--space -->
+
+                            <div class="md-margin clearfix visible-xs"></div><!--space -->
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="contact-info-box text-center">
+                                    <h3>Email</h3>
+                                    <span class="contact-info-icon redbg"><i class="fa fa-envelope-o"></i></span>
+                                    <ul class="contact-info-list">
+                                        <li><a href="mailto:msknmehdi@gmail.com">Mehdi AMASKANE</a></li>
+                                        <li><a href="mailto:zinebslaoui@gmail.com">Zineb SLAOUI</a></li>
+                                    </ul>
+                                </div><!-- End .contact-info-box -->
+                            </div><!-- End .col-md-4 -->
+                        </div><!-- End .row -->
+                    </div><!-- End .container -->
+                </section>
+            <%End If%>
         </div>
     </form>
 </body>
@@ -110,10 +153,10 @@
     <script type="text/javascript" src="Ressources/geass/geass/js/jquery.mb.YTPlayer.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/jquery.selectbox.min.js"></script>
-    <script type="text/javascript" src="Ressources/geass/geass/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="Ressources/geass/geass/js/jquery.themepunch.tools.min.js"></script>
     <script type="text/javascript" src="Ressources/js/ajaxCall.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/main.js"></script>
     <script type="text/javascript" src="Ressources/js/utils.js"></script>
+    <script type="text/javascript" src="Ressources/geass/geass/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="Ressources/geass/geass/js/jquery.themepunch.tools.min.js"></script>
     
 </html>

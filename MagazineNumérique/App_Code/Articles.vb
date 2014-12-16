@@ -161,6 +161,33 @@ Public Class Articles
         Return o
     End Function
 
+    Public Sub Update()
+        Dim sql As New SqlCommand
+        sql.CommandText = "sp_update_article"
+        sql.CommandType = CommandType.StoredProcedure
+        sql.Connection = New SqlConnection(ConfigurationManager.ConnectionStrings("THYP_ConnectionString").ConnectionString)
+        sql.Parameters.AddWithValue("PK_ARTICLE", Me.Pk)
+        sql.Parameters.AddWithValue("TITRE_ARTICLE", Me.TitreArticle)
+        sql.Parameters.AddWithValue("LOGIN_CREATION", Me.LoginCreation)
+        sql.Parameters.AddWithValue("PK_FICHIER_CENTRAL", Me.PkRedacteur)
+        sql.Parameters.AddWithValue("REDACTEUR", Me.Redacteur)
+        sql.Parameters.AddWithValue("ACCROCHE_ARTICLE", Me.PhraseAcroche)
+        sql.Parameters.AddWithValue("TEXT_ARTICLE", Me.TextArticle)
+        sql.Parameters.AddWithValue("DATE_CREATION", Me.DateCreation)
+        sql.Parameters.AddWithValue("DATE_MODIFICATION", Me.DateModification)
+        sql.Parameters.AddWithValue("LOGIN_MODIFICATION", Me.LoginModification)
+        sql.Parameters.AddWithValue("DATE_SUPPRESSION", Me.DateSuppression)
+        sql.Parameters.AddWithValue("LOGIN_SUPPRESSION", Me.LoginSuppression)
+        sql.Parameters.AddWithValue("EST_ARTICLE_PREMIERE_PAGE", Me.EstArticleUne)
+        sql.Parameters.AddWithValue("PK_IX_CATEGORIES_MEDIA", Me.CategorieMedia.PkCategorieMedia)
+        sql.Parameters.AddWithValue("CATEGORIE_MEDIA", Me.CategorieMedia.CategorieMedia)
+        sql.Parameters.AddWithValue("CHEMIN_IMAGE", Me.ImageUrl)
+        sql.Parameters.AddWithValue("CHEMIN_VIDEO", Me.VideoUrl)
+        sql.Connection.Open()
+        sql.ExecuteNonQuery()
+        sql.Connection.Close()
+    End Sub
+
 End Class
 
 ' Pour autoriser l'appel de ce service Web depuis un script à l'aide d'ASP.NET AJAX, supprimez les marques de commentaire de la ligne suivante.
