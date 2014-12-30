@@ -4,9 +4,11 @@ Partial Class Redacteur
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
-        listeCategoriesMedia.DataSource = Articles.GetCategoriesMedia
-        listeCategoriesMedia.DataBind()
-        listeCategoriesMedia.Items.Insert(0, "choisissez votre catégorie ")
+        If Not IsPostBack Then
+            listeCategoriesMedia.DataSource = Articles.GetCategoriesMedia
+            listeCategoriesMedia.DataBind()
+            listeCategoriesMedia.Items.Insert(0, "choisissez votre catégorie ")
+        End If
         If Context.Session("redacteur") = Nothing AndAlso Context.Session("admin") = Nothing Then
             Response.Redirect("./index.aspx")
         Else

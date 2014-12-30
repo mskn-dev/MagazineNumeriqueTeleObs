@@ -22,6 +22,8 @@
     <link type="text/css" href="Ressources/geass/geass/css/revslider.css" rel="stylesheet" />
     <link type="text/css" href="Ressources/geass/geass/css/style.css" rel="stylesheet" />
     <link type="text/css" href="Ressources/geass/geass/css/YTPlayer.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/jqueryUI/jquery-ui.structure.min.css" rel="stylesheet" />
+    <link type="text/css" href="Ressources/jqueryUI/jquery-ui.theme.min.css" rel="stylesheet" />
 
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -29,6 +31,7 @@
     <script type="text/javascript" src="Ressources/geass/geass/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/queryloader2.min.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/modernizr.js"></script>
+    <script type="text/javascript" src="Ressources/jqueryUI/jquery-ui.min.js"></script>
      
 </head>
 <body data-spy="scroll" data-target="#main-menu">
@@ -49,61 +52,90 @@
                         Utilisateur_ConnecteLogin = '<%= UserLogin%>';
                     </script>
                 <%End If%>
-                    <nav id="main-nav" class="navbar navbar-default navbar-transparent" role="navigation">
-                        <div class="container">
-                            <div class="navbar-header col-md-2">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand navbar-brand-img" href="index.aspx"><img src="Ressources/img/logo-teleobs.svg" /></a>
-                            </div>
-                            <div class="col-md-8 collapse navbar-collapse navbar-right" id="main-menu">
-                                <ul class="nav navbar-nav">
-                                    <li class="active"><a href="index.aspx">Acceuil</a></li>
-                                    <li><a href="Cinema.aspx">Cinéma</a></li>
-                                    <li><a href="Television.aspx">Télévision</a></li>
-                                    <li><a href="Actus.aspx">Actus</a></li>
-                                    <li><a href="ProgrammeTv.aspx">Programme Tv</a></li>
-                                    <%If Page.Title <> "Article" Then%>
-                                    <li><a href="#contactus">Contact</a></li>
-                                    <%End If%>
-                                    <%If Page.Title <> "Connexion" AndAlso Connected = False Then%>
-                                    <li><a class="connect-link" href="Connexion.aspx">Se connecter</a></li>
-                                    <%ElseIf Connected = True Then%>
-                                    <li><a class="connect-link" href="Deconnexion.aspx">Se deconnecter</a></li>
-                                    <%End If%>
-                                    <%If Page.Title <> "Abonnement" AndAlso Connected = False Then%>
-                                    <li><a class="connect-link" href="Abonnement.aspx">S'abonner</a></li>
-                                     <%ElseIf Connected = True Then%>
-                                    <% If EstRedacteur OrElse EstAdmin Then%>
-                                    <li><a class="dropdown-toggle connect-link" href="Profil.aspx" data-toggle="dropdown" aria-expanded="true"><div runat="server" id="NomProfil" class="alert alert-navbar sm-separator">Bonjour Mr <%=UserName%> <%If EstRedacteur OrElse EstAdmin Then%><i class="fa fa-angle-down"></i><%End If%></div></a>
-                                        <ul class="menu-redacteur-admin dropdown-menu">
-                                            <li><a href="../Profil.aspx">Profil</a></li>
-                                            <li><a href="../Redacteur.aspx">Articles</a></li>
-                                            <%If EstAdmin Then%>
-                                            <li><a href="../Admin.aspx">Redacteurs</a></li>
-                                            <%End If%>
-                                        </ul>
-                                        <%Else%>
-                                        <li><a href="Profil.aspx"><div runat="server" id="NomProfilLecteur" class="alert alert-navbar sm-separator">Bonjour Mr <%=UserName%></div></a>
-                                        <% End If%>
-                                    </li> 
-                                    <%End If%>
                    
-                                </ul>
-                            </div><!-- /.navbar-collapse -->
-                        </div><!-- /.container-fluid -->
-                    </nav>
-                </header>
+                            
+                       
+                <%If Not Connected Then%>
+                 <nav id="main-nav-black" class="navbar navbar-default navbar-transparent" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header col-md-3">
+                            <a class="navbar-brand navbar-brand-img" href="index.aspx"><img src="Ressources/img/logo-teleobs.svg" /></a>
+                        </div>
+                        <div class="col-md-9 collapse navbar-collapse navbar-left" id="main-menu">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="index.aspx">Acceuil</a></li>
+                                <li><a href="Cinema.aspx">Cinéma</a></li>
+                                <li><a href="Television.aspx">Télévision</a></li>
+                                <li><a href="Actus.aspx">Actus</a></li>
+                                <li><a href="ProgrammeTv.aspx">Programme Tv</a></li>
+                                <%If Page.Title <> "Article" Then%>
+                                <li><a href="#contactus">Contact</a></li>
+                                <%End If%>
+                                <%If Page.Title <> "Connexion" AndAlso Connected = False Then%>
+                                <li><a class="connect-link" href="Connexion.aspx">Se connecter</a></li>
+                                <%ElseIf Connected = True Then%>
+                                <li><a class="connect-link" href="Deconnexion.aspx">Se deconnecter</a></li>
+                                <%End If%>
+                                <%If Page.Title <> "Abonnement" AndAlso Connected = False Then%>
+                                <li><a class="connect-link" href="Abonnement.aspx">S'abonner</a></li>
+                                <%End If%>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+                <%Else%>
+                 <nav id="main-nav" class="navbar navbar-default navbar-transparent" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header col-md-3">
+                            <a class="navbar-brand navbar-brand-img" href="index.aspx"><img src="Ressources/img/logo-teleobs.svg" /></a>
+                        </div>
+                        <div class="col-md-9 collapse navbar-collapse navbar-right" id="main-menu">
+                            <ul class="col-md-12 nav navbar-nav">
+                                <% If EstRedacteur OrElse EstAdmin Then%>
+                                <li><a class="dropdown-toggle connect-link" href="Profil.aspx" data-toggle="dropdown" aria-expanded="true"><div runat="server" id="Div1" class="alert alert-navbar sm-separator">Bonjour Mr <%=UserName%> <%If EstRedacteur OrElse EstAdmin Then%><i class="fa fa-angle-down"></i><%End If%></div></a>
+                                    <ul class="menu-redacteur-admin dropdown-menu">
+                                        <li><a href="../Profil.aspx">Profil</a></li>
+                                        <li><a href="../Redacteur.aspx">Articles</a></li>
+                                        <%If EstAdmin Then%>
+                                        <li><a href="../Admin.aspx">Redacteurs</a></li>
+                                        <%End If%>
+                                    </ul>
+                                    <%Else%>
+                                    <li><a href="Profil.aspx"><div runat="server" id="Div2" class="alert alert-navbar sm-separator">Bonjour Mr <%=UserName%></div></a>
+                                    <% End If%>
+                                </li> 
+                                <li><a class="connect-link" href="Deconnexion.aspx">Se deconnecter</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.container-fluid -->
+                </nav>
+                <nav id="second-nav" class="second navbar navbar-default navbar-transparent" role="navigation">
+                    <div class="container">
+                        <div class="col-md-9 collapse navbar-collapse navbar-left" id="main-menu">
+                            <ul class="col-md-12 nav navbar-nav">
+                                <li class="active"><a href="index.aspx">Acceuil</a></li>
+                                <li><a href="Cinema.aspx">Cinéma</a></li>
+                                <li><a href="Television.aspx">Télévision</a></li>
+                                <li><a href="Actus.aspx">Actus</a></li>
+                                <li><a href="ProgrammeTv.aspx">Programme Tv</a></li>
+                                <%If Page.Title <> "Article" Then%>
+                                <li><a href="#contactus">Contact</a></li>
+                                <%End If%>
+                            </ul>
+                        </div>
+                        <div class= "pull-right no-margin no-padding col-md-5">
+                            <input class="form-control" type="text" placeholder="Recherche : Articles, Rédacteurs, ..." id="rechercheArticles" />
+                        </div>
+                    </div><!-- /.container-fluid -->
+                </nav>
+            <% End If%>
+            </header>
             <%If Page.Title <> "Accueil" Then%>
                 <div class="xlg-margin2x"></div>
             <%End If%>
             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-            <%If Page.Title <> "Article" Then%>
+            <%--<%If Page.Title <> "Article" Then%>
                 <section id="contactus" class="section">
                     <header class="no-margin container text-center">
                         <h1 class="section-title" style="font-size: 75px;">Contact</h1>
@@ -143,7 +175,7 @@
                         </div><!-- End .row -->
                     </div><!-- End .container -->
                 </section>
-            <%End If%>
+            <%End If%>--%>
         </div>
     </form>
 </body>
@@ -158,5 +190,5 @@
     <script type="text/javascript" src="Ressources/js/utils.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/jquery.themepunch.revolution.min.js"></script>
     <script type="text/javascript" src="Ressources/geass/geass/js/jquery.themepunch.tools.min.js"></script>
-    
+    <script type="text/javascript" src="Ressources/js/recherche.js"></script>
 </html>

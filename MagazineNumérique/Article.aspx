@@ -4,12 +4,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div id="articleDiv" class="center-block-article-single displayNone row single-portfolio">
-        <div id="mediaArticle" style="margin-top:5%;" class="col-md-6">
-        </div><!-- End .col-md-7 --> 
-
-        <div id="textArticleDiv" class="col-md-6">
+        
+        <div id="textArticleDiv" class="text-justify col-md-12">
             <div class="portfolio-item-details">
-                <h2 id="titreArticle" class="portfolio-title"></h2>
+                <h2 id="titreArticle" class="portfolio-title text-center"></h2>
+                <div id="mediaArticle" class="col-md-8">
+                </div><!-- End .col-md-7 --> 
                 <div id="textArticle">
 
                 </div>
